@@ -58,7 +58,7 @@ fun SettingsScreen(
             }
         }
         Spacer(Modifier.height(24.dp))
-        Text("玻璃效果强度（阶段 3 生效）", fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+        Text("玻璃效果强度", fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
         Spacer(Modifier.height(8.dp))
         Slider(
             value = glassIntensity,
@@ -67,8 +67,8 @@ fun SettingsScreen(
             modifier = Modifier.fillMaxWidth(),
         )
         Text(
-            "当前：${(glassIntensity * 100).toInt()}%。阶段 3 接入 Backdrop 后映射为折射/模糊强度；" +
-                "设为 0 可关闭玻璃特效（低性能降级）。",
+            "当前：${(glassIntensity * 100).toInt()}%。映射为玻璃折射 / 模糊强度；" +
+                "设为 0 关闭玻璃特效（纯半透明材质，低性能降级）。",
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
