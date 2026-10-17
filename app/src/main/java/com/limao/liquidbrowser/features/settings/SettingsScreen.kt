@@ -84,5 +84,6 @@ fun SettingsScreen(
             lineHeight = 20.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
+        CrashLogSection()
     }
 }
