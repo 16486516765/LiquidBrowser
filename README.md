@@ -16,9 +16,9 @@
 ## 构建
 
 ```bash
+chmod +x gradlew  # 首次克隆后执行一次：网页端上传的文件不带可执行权限
 ./gradlew assembleDebug
 # 产物：app/build/outputs/apk/debug/app-debug.apk
-# 注：gradle-wrapper.jar 为二进制文件，需经网页端上传；CI 使用 setup-gradle 直接安装 Gradle 9.7.1，不依赖 wrapper。
 ```
 
 或推到 GitHub 后由 `.github/workflows/android.yml` 自动构建，产物在 Actions 的 Artifacts 里。
@@ -54,4 +54,4 @@
 - 主题选择、玻璃强度仅内存生效，未持久化（阶段 4+ 接 DataStore）。
 - 浏览器界面是占位，未接入 WebView，不能真正加载网页。
 - 书签 / 历史无数据层，仅空状态界面。
-- 未在本环境编译验证（沙箱无法运行 Gradle），首次构建结果以 Android Studio 或 CI 为准。
+- 已由 CI 验证可构建。本地构建见上文“构建”一节，注意 gradlew 可执行权限。
