@@ -1,5 +1,6 @@
 package com.limao.liquidbrowser.app
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -33,6 +34,10 @@ fun LiquidBrowserApp() {
         pendingQuery = query
         screen = Screen.Browser
     }
+
+    // 系统返回键：非首页时回到首页；首页时走默认行为（退出应用）。
+    // 阶段 2 接入 WebView 后，浏览器界面应先回退网页历史。
+    BackHandler(enabled = screen != Screen.Home) { screen = Screen.Home }
 
     LiquidBrowserTheme(themeMode = themeMode) {
         Scaffold(
