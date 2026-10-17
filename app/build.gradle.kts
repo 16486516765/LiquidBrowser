@@ -3,11 +3,9 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-
 android {
     namespace = "com.limao.liquidbrowser"
     compileSdk = 37
-
 
     defaultConfig {
         applicationId = "com.limao.liquidbrowser"
@@ -16,7 +14,6 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
-
 
     buildTypes {
         release {
@@ -35,7 +32,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
@@ -45,4 +41,5 @@ dependencies {
     implementation(libs.compose.foundation)
     implementation(libs.compose.material3)
     implementation(libs.compose.material.icons.extended)
+    implementation(libs.backdrop)
 }
