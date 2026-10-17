@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色模式：平台深色主题，窗口背景深色，避免启动白闪；状态栏浅色图标。 -->
+    <style name="Theme.LiquidBrowser" parent="android:Theme.Material.NoActionBar" />
+</resources>
